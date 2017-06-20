@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class CodeConverterService {
 
   constructor() {
-    console.log("Code converter service initailized...");
+//    console.log("Code converter service initailized...");
   }
 
   convert(oldCode: string): string {
@@ -29,10 +29,10 @@ export class Converter {
     let startIndex = line.indexOf(Keywords.NG_REPEAT);
     let startQuoteIndex = line.indexOf('\"', startIndex)
     let endQuoteIndex = line.indexOf('\"', startQuoteIndex + 1)
-    console.log(`startIndex ${startIndex} startQuoteIndex${startQuoteIndex} ${endQuoteIndex}`);
+    //console.log(`startIndex ${startIndex} startQuoteIndex${startQuoteIndex} ${endQuoteIndex}`);
 
     let ngRepeatPart = line.substr(startIndex, (endQuoteIndex - startIndex) + 1);
-    console.log(`ngRepeatPart: ${ngRepeatPart}`);
+    //console.log(`ngRepeatPart: ${ngRepeatPart}`);
 
     let parts = ngRepeatPart.split('=');
     let expressionParts = parts[1].split(' ');
