@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CodeConverterService } from "app/converter/code-converter.service";
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,22 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  sayHi() {
-    alert('jai ganesh');
+  oldCode: string;
+  newCode: string;
+  constructor(private codeConverterService: CodeConverterService) {
+
+  }
+
+  ngOnInit() {
+    this.oldCode = ``;
+  }
+
+  convert() {
+    this.newCode = this.codeConverterService.convert(this.oldCode);
+  }
+
+  copy() {
+    window.prompt("Copy to clipboard: Ctrl+C, Enter", this.newCode);
   }
 
 }

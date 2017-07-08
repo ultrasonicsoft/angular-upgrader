@@ -1,22 +1,84 @@
-<md-toolbar color="primary">
-  <div style="text-align:center">
+<md-toolbar color="primary" style="text-align:center">
+  <div>
     <h1>
-      Welcome to Angular 1.x to Angular 4.x converter
+      Angular 1.x to Angular 4.x - Convert Angular 1.x code snippet to Angular 2.x / 4.x version online
     </h1>
   </div>
 </md-toolbar>
 
+<h4 style="text-align:right">By Balram Chavan -
+  <a href="https://github.com/ultrasonicsoft" target="_blank">Github</a>
+  <a href="https://www.linkedin.com/in/balram-chavan-957511116/" target="_blank">LinkedIn</a>
+</h4>
+
+<md-grid-list cols="2" rowHeight="2:1">
+  <md-grid-tile>
+    <md-card class="example-card" style="width: 80%">
+      <md-card-header>
+        <md-card-title>Type/paste your Angular 1.x code snippet</md-card-title>
+      </md-card-header>
+      <md-card-content>
+        <md-input-container style="width: 100%">
+          <textarea mdInput mdAutosizeMinRows="10" placeholder="Angular 1.x code..." mdTextareaAutosize [(ngModel)]="oldCode"></textarea>
+        </md-input-container>
+        <button md-raised-button color="primary" (click)="convert()">Convert</button>
+      </md-card-content>
+
+    </md-card>
+
+  </md-grid-tile>
+  <md-grid-tile>
+
+    <md-card class="example-card" style="width: 80%">
+      <md-card-header>
+        <md-card-title>Angular 4.x code</md-card-title>
+      </md-card-header>
+      <md-card-content>
+        <md-input-container style="width: 100%">
+          <textarea mdInput readonly mdAutosizeMinRows="10" placeholder="Angular 4.x code..." mdTextareaAutosize [(ngModel)]="newCode"></textarea>
+        </md-input-container>
+        <button md-raised-button color="primary" (click)="copy()">Copy</button>
+      </md-card-content>
+
+    </md-card>
+  </md-grid-tile>
+</md-grid-list>
+
+<br>
+<br>
+
 <b>Supported features: </b>
 <ul>
   <li>ng-repeat</li>
+  <li>ng-repeat with limit-to</li>
+  <li>ng-class</li>
+  <li>ng-click</li>
+  <li>ng-href</li>
+  <li>ng-if</li>
+  <li>ng-model</li>
+  <li>ng-show</li>
+  <li>ng-src</li>
+  <li>ng-style</li>
+  <li>ng-switch</li>
 </ul>
-<router-outlet></router-outlet>
 
-<md-toolbar color="secondary" style="position:fixed; bottom: 0">
-  <span class="example-spacer"></span>
-  <span>By Balram Chavan -
-    <a href="https://github.com/ultrasonicsoft">Github</a>
-    <a href="linkedin.com/in/balram-chavan-957511116/">LinkedIn</a>
-    </span>
 
-</md-toolbar>
+<footer>
+  <b>Please feel free to reach out to me via email <a href="mailto:balramchavan@riedlabs.com" target="_top">Balram Chavan</a></b>
+
+  <br/>
+  <br/>
+  <span>Visitor Count:</span>
+  <br/>
+
+  <a href="https://www.freecounterstat.com" title="website counter"><img src="https://counter1.fcs.ovh/private/freecounterstat.php?c=hsyrghpsrxyc83kym56erqm8m6cd7be1" border="0" title="website counter" alt="website counter"></a>
+
+</footer>
+<br/>
+<b>Demo</b>
+<br/>
+
+<video width="90%" controls>
+  <source src="./demo.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
